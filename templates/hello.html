@@ -1,0 +1,18 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>hello Page</title>
+{% endblock %}
+
+{% block body_block  %}
+
+<center>
+    <br><br><br><br><br>
+    <form action="{% url 'conform_logout' %}" method="POST">
+        {% csrf_token %}
+        <a href="{% url 'login_user' %}"><input type="submit" value="yes iam sure" class="btn btn-danger"></a>
+    </form><br>
+    <a href="{% url 'home' %}"><input type="submit" value="no go back" class="btn btn-primary"></a>
+    
+</center>
+{% endblock %}
